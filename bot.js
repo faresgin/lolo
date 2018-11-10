@@ -31,4 +31,19 @@ client.user.setGame(`Five Stars`,"http://twitch.tv/S-F")
 client.login(process.env.BOT_TOKEN);
 
 
-//تحت تحط الاكواد و حط مسافة 3 سطورد بين كل كود ولا تعدل على السورس اللي فوق
+
+
+
+client.on('message', message => {
+if (message.content.startsWith('الكلام الي هتقوله')){
+     let ra3d = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("RANADOM")
+  .setDescription(" **الكلام الي هيرد عليه البوت**")
+     
+     
+  message.channel.sendEmbed(ra3d);
+    }
+});
+
+
