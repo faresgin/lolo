@@ -28,8 +28,6 @@ client.user.setGame(`Five Stars`,"http://twitch.tv/S-F")
   console.log('')
 });
 
-client.login(process.env.BOT_TOKEN);
-
 
 
 client.on('message', message => {
@@ -43,3 +41,8 @@ if (message.content.startsWith('هلا')){
   message.channel.sendEmbed(ra3d);
     }
 });
+
+
+
+
+client.login(process.env.BOT_TOKEN);
