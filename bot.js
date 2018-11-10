@@ -29,3 +29,6 @@ client.user.setGame(`Five Stars`,"http://twitch.tv/S-F")
 });
 
 client.login(process.env.BOT_TOKEN);
+
+
+//تحت تحط الاكواد و حط مسافة 3 سطورد بين كل كود ولا تعدل على السورس اللي فوق
