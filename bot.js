@@ -32,8 +32,6 @@ client.login(process.env.BOT_TOKEN);
 
 
 
-
-
 client.on('message', message => {
 if (message.content.startsWith('هلا')){
      let ra3d = new Discord.RichEmbed()
