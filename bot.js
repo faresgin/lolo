@@ -35,15 +35,13 @@ client.login(process.env.BOT_TOKEN);
 
 
 client.on('message', message => {
-if (message.content.startsWith('الكلام الي هتقوله')){
+if (message.content.startsWith('هلا')){
      let ra3d = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("RANADOM")
-  .setDescription(" **الكلام الي هيرد عليه البوت**")
+  .setDescription(" **هلا بك**")
      
      
   message.channel.sendEmbed(ra3d);
     }
 });
-
-
