@@ -30,18 +30,11 @@ client.user.setGame(`Five Stars`,"http://twitch.tv/S-F")
 
 
 
-client.on('message', message => {
-if (message.content.startsWith('هلا')){
-     let ra3d = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("RANADOM")
-  .setDescription(" **هلا بك**")
      
-     
-  message.channel.sendEmbed(ra3d);
-    }
+     client.on('message', msg => {
+  if(msg.content === 'هلا')
+  msg.reply('هلا بك')
 });
-
 
 
 
