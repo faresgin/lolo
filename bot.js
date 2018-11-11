@@ -49,7 +49,6 @@ client.on('message', message => {
 
 
 
-
 client.on('message', message => {
    let embed = new Discord.RichEmbed()
 
