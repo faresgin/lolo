@@ -75,7 +75,7 @@ if(message.content.split(' ')[0] == '*bc') {
 
 
 client.on('message', message => {
-if (message.content.startsWith('الكلام الي هتقوله')){
+if (message.content.startsWith('اهلا')){
      let ra3d = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("RANADOM")
