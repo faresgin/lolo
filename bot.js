@@ -72,4 +72,19 @@ if(message.content.split(' ')[0] == '*bc') {
     }
 })
 
+
+
+client.on('message', message => {
+if (message.content.startsWith('الكلام الي هتقوله')){
+     let ra3d = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("RANADOM")
+  .setDescription(" **الكلام الي هيرد عليه البوت**")
+     
+     
+  message.channel.sendEmbed(ra3d);
+    }
+});
+
+
 client.login(process.env.BOT_TOKEN);
