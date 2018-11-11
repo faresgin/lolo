@@ -32,7 +32,7 @@ client.user.setGame(`Five Stars`,"http://twitch.tv/S-F")
 
 client.on('message', msg => {
   if(msg.content === 'هلا')
-  msg.reply('هلا بك حبي اتني ان اكون عجبتك:heart: ')
+  msg.reply(':heart: هلا بك حبي اتني ان اكون عجبتك ')
 });
 
 
@@ -74,6 +74,11 @@ if(message.content.split(' ')[0] == '*bc') {
 
 
 
-
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('id server').roles.find("name", "رانبو").setColor("RANDOM");
+  };
+  setInterval(lol, 10000);
+});
 
 client.login(process.env.BOT_TOKEN);
