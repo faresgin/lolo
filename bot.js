@@ -47,4 +47,17 @@ client.on('message', message => {
 }
 });
 
+
+
+client.on('typingStart', (ch, user) => {
+    if(user.presence.status === 'offline') {
+        ch.send(${user} تحذير هذا شخص مسوي نفسه اوف لاين ويكتب)
+        .then(msg => {
+        .setAuthor(message.author.username)
+    let const = new Discord.RichEmbed()
+            msg.delete(1000)
+        })
+    }
+});
+
 client.login(process.env.BOT_TOKEN);
