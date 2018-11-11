@@ -39,9 +39,11 @@ client.on('message', msg => {
 
 client.on('typingStart', (ch, user) => {
     if(user.presence.status === 'offline') {
-        ch.send(`${user} تحذير هذا شخص مسوي نفسه اوف لاين ويكتب`)
+        ch.send(${user} تحذير هذا شخص مسوي نفسه اوف لاين ويكتب)
         .then(msg => {
-            msg.delete(10000)
+        .setAuthor(message.author.username)
+    let const = new Discord.RichEmbed()
+            msg.delete(1000)
         })
     }
 });
