@@ -76,7 +76,7 @@ if(message.content.split(' ')[0] == '*bc') {
 
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('id server').roles.find("name", "كلم").setColor("RANDOM");
+    client.guilds.get('id server').roles.find("name", "ممم").setColor("RANDOM");
   };
   setInterval(lol, 10000);
 });
