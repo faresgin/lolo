@@ -30,8 +30,7 @@ client.user.setGame(`Five Stars`,"http://twitch.tv/S-F")
 
 
 
-     
-     client.on('message', msg => {
+client.on('message', msg => {
   if(msg.content === 'هلا')
   msg.reply('هلا بك')
 });
