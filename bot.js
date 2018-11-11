@@ -35,4 +35,16 @@ client.on('message', msg => {
   msg.reply('هلا بك')
 });
 
+
+
+client.on('message', message => {
+    if(message.content.includes('discord.gg')){
+                                            if(!message.channel.guild) return message.reply('** advertising me on DM ? 🤔   **');
+        if (!message.member.hasPermissions(['ADMINISTRATOR'])){
+        message.delete()
+    return message.reply(`** No Invite Links 😠 !**`)
+    }
+}
+});
+
 client.login(process.env.BOT_TOKEN);
