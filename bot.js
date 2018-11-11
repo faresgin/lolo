@@ -32,7 +32,7 @@ client.user.setGame(`Five Stars`,"http://twitch.tv/S-F")
 
 client.on('message', msg => {
   if(msg.content === 'هلا')
-  msg.reply('هلا بك')
+  msg.reply('هلا بك حبي اتني ان اكون عجبتك:heart: ')
 });
 
 
@@ -74,17 +74,6 @@ if(message.content.split(' ')[0] == '*bc') {
 
 
 
-client.on('message', message => {
-if (message.content.startsWith('اهلا')){
-     let ra3d = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("RANADOM")
-  .setDescription(" **الكلام الي هيرد عليه البوت**")
-     
-     
-  message.channel.sendEmbed(ra3d);
-    }
-});
 
 
 client.login(process.env.BOT_TOKEN);
