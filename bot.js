@@ -87,4 +87,123 @@ setInterval(function(){})
     }
 });
 
+
+
+client.on("message", message => {
+    var prefix = "*";
+ if (message.content === "help") {
+  const embed = new Discord.RichEmbed()  
+      .setColor("#000000")
+      .setDescription(`
+     
+             Please Chose:
+ 
+             
+${prefix}*𝑯𝑬𝑳𝑷-𝑮𝑬𝑵𝑬𝑹𝑳☞ الاوامر العامه
+ 
+${prefix}*𝑯𝑬𝑳𝑷-𝑨𝑫𝑴𝑰𝑵☞ الاوامر الاداريه 
+             
+${prefix}*𝑯𝑬𝑳𝑷-𝑮𝑨𝑴𝑬𝑺☞ اوامر الالعاب
+ 
+${prefix}*𝑯𝑬𝑳𝑷 𝑩𝑶𝑻☞ اوامر حول البوت
+
+      `)
+   message.channel.sendEmbed(embed)
+   
+   }
+   });
+ 
+ 
+client.on("message", message => {
+    var prefix = "*";
+ if (message.content === "help-generl") {
+     message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed()
+      .setColor("#000000")
+      .setDescription(`
+           𝑯𝑬𝑳𝑷-𝑮𝑬𝑵𝑬𝑹𝑳|الاوامر عامة
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+`)
+   message.author.sendEmbed(embed)
+   
+   }
+   });
+   
+   client.on("message", message => {
+    var prefix = "*";
+ if (message.content === "help-admin") {
+      message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed()
+      .setColor("#000000")
+      .setDescription(`
+          𝑯𝑬𝑳𝑷-𝑨𝑫𝑴𝑰𝑵|اوامر ادارة السيرفر
+
+
+
+
+
+
+
+
+
+
+`)
+   message.author.sendEmbed(embed)
+   
+   }
+   });
+ 
+   client.on("message", message => {
+    var prefix = "*";
+ if (message.content === "help-games") {
+      message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed()
+      .setColor("#000000")
+      .setDescription(`
+         𝑯𝑬𝑳𝑷-𝑮𝑨𝑴𝑬𝑺|اوامر الالعاب
+
+
+
+
+
+
+  `)
+   message.author.sendEmbed(embed)
+   
+   }
+   });
+             
+client.on("message", message => {
+    var prefix = "*";
+ if (message.content === "help-bot") {
+     message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed()
+      .setColor("#000000")
+      .setDescription(`
+                𝑯𝑬𝑳𝑷 𝑩𝑶𝑻 |اوامر حول البوت   
+
+
+
+
+
+
+`)
+   message.author.sendEmbed(embed)
+   
+   }
+   });
+
 client.login(process.env.BOT_TOKEN);
