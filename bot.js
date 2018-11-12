@@ -206,4 +206,14 @@ client.on("message", message => {
    }
    });
 
+
+
+client.on('message', message=> {
+    if (message.author.bot) return;
+    if (message.isMentioned(client.user))
+    {
+    message.reply(" :heart: هلا حبي اتمني ان اكون عجبتك ايش  تريد؟  ");
+    }
+});
+
 client.login(process.env.BOT_TOKEN);
