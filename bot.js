@@ -99,7 +99,7 @@ client.on("message", message => {
              Please Chose:
  
              
-${prefix}**𝑯𝑬𝑳𝑷-𝑮𝑬𝑵𝑬𝑹𝑳☞ الاوامر العامه
+${prefix}   *𝑯𝑬𝑳𝑷-𝑮𝑬𝑵𝑬𝑹𝑳☞ الاوامر العامه
  
 ${prefix}**𝑯𝑬𝑳𝑷-𝑨𝑫𝑴𝑰𝑵☞ الاوامر الاداريه 
              
