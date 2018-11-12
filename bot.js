@@ -91,7 +91,7 @@ setInterval(function(){})
 
 client.on("message", message => {
     var prefix = "*";
- if (message.content === "help") {
+ if (message.content === "*help") {
   const embed = new Discord.RichEmbed()  
       .setColor("#000000")
       .setDescription(`
@@ -116,7 +116,7 @@ ${prefix}*𝑯𝑬𝑳𝑷 𝑩𝑶𝑻☞ اوامر حول البوت
  
 client.on("message", message => {
     var prefix = "*";
- if (message.content === "help-generl") {
+ if (message.content === "*help-generl") {
      message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed()
       .setColor("#000000")
@@ -144,7 +144,7 @@ client.on("message", message => {
    
    client.on("message", message => {
     var prefix = "*";
- if (message.content === "help-admin") {
+ if (message.content === "*help-admin") {
       message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed()
       .setColor("#000000")
@@ -168,7 +168,7 @@ client.on("message", message => {
  
    client.on("message", message => {
     var prefix = "*";
- if (message.content === "help-games") {
+ if (message.content === "*help-games") {
       message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed()
       .setColor("#000000")
@@ -188,7 +188,7 @@ client.on("message", message => {
              
 client.on("message", message => {
     var prefix = "*";
- if (message.content === "help-bot") {
+ if (message.content === "*help-bot") {
      message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed()
       .setColor("#000000")
