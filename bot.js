@@ -285,7 +285,7 @@ client.on("message", message => {
 
 
 client.on('message', message => {      
-if (message.content.startsWith('$clear')) { //xRGRx .. By FIVE STARS
+if (message.content.startsWith('*clear')) { 
     if(!message.channel.guild) return message.reply('⛔ | This Command For Servers Only!');
         if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send('⛔ | You dont have **MANAGE_MESSAGES** Permission!');
         if(!message.guild.member(client.user).hasPermission('MANAGE_MESSAGES')) return message.channel.send('⛔ | I dont have **MANAGE_MESSAGES** Permission!');
