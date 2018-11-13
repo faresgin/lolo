@@ -285,7 +285,7 @@ client.on("message", message => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("*avatar")) {
+    if (message.content.startsWith("^^avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
