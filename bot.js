@@ -41,13 +41,9 @@ client.on('ready', () => {
   console.log('╚[════════════]╝')
   console.log('')
   console.log('')
-});
-
-//--
+})
 
 
-//قسم الالوان
-//كود انشاء 200 لون
 
 client.on('message', function(message) {
     if(!message.channel.guild) return;
@@ -76,7 +72,7 @@ client.on('message', function(message) {
     }
     });
 
-//-----------------
+
 
 client.on("ready", () => {
   function arabecodes() {
@@ -86,13 +82,11 @@ client.on("ready", () => {
 })
 
 
-//-----------
 
-///bc all
-client.on('message', message => {//mrx-dev
+client.on('message', message => {
   const args = message.content.split(' ').slice(1).join(' ');
-  if (message.content.startsWith('*bsall')){
-   if(!message.author.id === '427054141492297728') return; //mrx-dev
+  if (message.content.startsWith('*bc-all')){
+   if(!message.author.id === '427054141492297728') return;
   message.channel.sendMessage(`☑ | Done ... The Broadcast Message Has Been Sent For __${client.users.size}__ Users`)
   client.users.forEach(m =>{
   m.sendMessage(args)
@@ -100,7 +94,7 @@ client.on('message', message => {//mrx-dev
   }
   });
 
-//رينبو
+
 
 client.on('message', message => {
      if (message.author.bot) return;
@@ -146,7 +140,7 @@ if (message.content.startsWith(prefix + "timb")) {
 }
 });
 
-//ttttttttt
+
 
 client.on('message', msg => { 
     if (msg.content.startsWith(`*warn`)) {
@@ -154,9 +148,9 @@ client.on('message', msg => {
        let args = msg.content.split(" ").slice(1);
       if (!msg.mentions.members.first()) return msg.reply('منشن الشخص المحدد')
       if (!args[0]) return msg.reply('اكتب السبب')
-      //غير اسم الروم او سوي روم بذا الاسم 
+       
       if (msg.guild.channels.find('name', '✽-warns')) {
-        //اذا غيرت فوق غير هنا كمان 
+         
         msg.guild.channels.find('name', 'warns').send(`
       تم اعطائك انذار : ${msg.mentions.members.first()}
       لأنك قمت بما يلي
