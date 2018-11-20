@@ -160,7 +160,7 @@ client.on('message', msg => {
     }
 })
 
-//كود الكريدت
+ 
 
 const moment = require("moment");  
 const dateFormat = require('dateformat');
@@ -225,10 +225,10 @@ if(message.content.startsWith(prefix + 'trans')) {
             message.channel.send(`**Usage: ${prefix}trans @someone amount**`);
          return;
            }
-        // We should also make sure that args[0] is a number
+       
         if (isNaN(args[0])) {
             message.channel.send(`**Usage: ${prefix}trans @someone amount**`);
-            return; // Remember to return if you are sending an error message! So the rest of the code doesn't run.
+            return; 
              }
             let defineduser = '';
             let firstMentioned = message.mentions.users.first();
@@ -251,20 +251,18 @@ message.channel.send(`**:moneybag: | ${message.author.username}, has transferrer
  
       });
 
-//كود اعطاء ربة اول ما يدخل
+
 
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","Members"));
+    member.addRole(member.guild.roles.find("name","/membear"));
     });
 
-//tttttttt
 
-//كود التيكت
 
 client.on("message", (message) => {
-    /// ALPHA CODES
-   if (message.content.startsWith("*ticket")) {     /// ALPHA CODES
-        const reason = message.content.split(" ").slice(1).join(" ");     /// ALPHA CODES
+    
+   if (message.content.startsWith("*ticket")) {     
+        const reason = message.content.split(" ").slice(1).join(" ");     
         if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`This server doesn't have a \`Support Team\` role made, so the ticket won't be opened.\nIf you are an administrator, make one with that name exactly and give it to users that should be able to see tickets.`);
         if (message.guild.channels.exists("name", "ticket-{message.author.id}" + message.author.id)) return message.channel.send(`You already have a ticket open.`);    /// ALPHA CODES
         message.guild.createChannel(`ticket-${message.author.username}`, "text").then(c => {
@@ -273,7 +271,7 @@ client.on("message", (message) => {
             c.overwritePermissions(role, {
                 SEND_MESSAGES: true,
                 READ_MESSAGES: true
-            });    /// ALPHA CODES
+            });    
             c.overwritePermissions(role2, {
                 SEND_MESSAGES: false,
                 READ_MESSAGES: false
@@ -303,10 +301,10 @@ client.on("message", (message) => {
                         max: 1,
                         time: 10000,
                         errors: ['time'],
-                    })    /// ALPHA CODES
+                    })    
                     .then((collected) => {
                         message.channel.delete();
-                    })    /// ALPHA CODES
+                    })    
                     .catch(() => {
                         m.edit('Ticket close timed out, the ticket was not closed.').then(m2 => {
                             m2.delete();
@@ -317,7 +315,7 @@ client.on("message", (message) => {
  
 });
 
-//كود الساعه
+
 
 var p = "*";
 client.on('message', message => {
@@ -384,10 +382,6 @@ client.on('message', message => {
     });
  
 
-
-
-
-//كود الترحيب ب رساله
 
  const sWlc = {}
 client.on('message', message => {
@@ -460,13 +454,13 @@ client.on("guildMemberAdd", member => {
                               ctx.fillStyle = "#FFFFFF";
                                 ctx.fillText(member.user.username, 240, 150);
                              
-                              //NAMEً
+                              
                               ctx.font = '21px kathen';
                               ctx.fontSize = '20px';
                               ctx.fillStyle = "#FFFFFF";
       ctx.fillText(`Welcome To ${member.guild.name}`, 240, 90);
      
-                              //AVATARً
+                              
                               let Avatar = Canvas.Image;
                               let ava = new Avatar;
                               ava.src = buf;
@@ -491,7 +485,7 @@ client.on("guildMemberAdd", member => {
       });
 
 
-//كود رسائل خاص البوت
+
 
 client.on('message', function(message) {
     if (message.channel.type === "dm") {
@@ -503,11 +497,11 @@ client.on('message', function(message) {
             .setThumbnail(`${message.author.avatarURL}`)
             .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
             .setFooter(`من (@${message.author.tag})  |  (${message.author.id})`)
-        client.channels.get("497081825492074496").send({ embed: stewart });
+        client.channels.get("511683572348878869").send({ embed: stewart });
     }
 });
 
-//كود الاعلام
+
 
 client.on('message', msg => {
   if (msg.content === 'فلسطين') {      
@@ -594,7 +588,7 @@ client.on('message', msg => {
 });
 
 
-//كود السبورت
+
  
 client.on('message' , message => {
  
@@ -626,7 +620,8 @@ client.on('message' , message => {
  .setThumbnail(client.user.avatarURL)    
  .setDescription("دعوة اضافة البوت" + `
  **
-رابط البوت |
+
+
 http://cutt.us/GMZNBot
  **
 `);
@@ -634,33 +629,7 @@ http://cutt.us/GMZNBot
    }
 });
  
-//كود اليغير الحال حقت البوت كل شوي بس بلاينج
- 
-//client.on('ready', function(){
-    //var ms = 1000;
-    //var setGame = [`*help || inv`,'*help || inv','*help || inv','By: Ahmed Magdi','البوت منور بكم يا اساطير'];
-    //var i = -1;
-    //var j = 0;
-    //setInterval(function (){
-        //if( i == -1 ){
-            //j = 1;
-        //}
-        //if( i == (setGame.length)-1 ){
-            //j = -1;
-        //}
-        //i = i+j;
-        //client.user.setGame(setGame[i]);
-    //}, ms);2000
- 
- 
- 
-//});
- 
- 
- 
- 
- 
-//عدد الاشخاص المبنده
+
  
 client.on('message', message => {
     if (message.content.startsWith("*bans")) {
@@ -673,7 +642,7 @@ client.on('message', message => {
 }
 });
  
-//كود الارسال علي الخاص شكرا ل اضافة البوت لسيرفرك
+
 
 client.on('guildCreate', guild => {
   var embed = new Discord.RichEmbed()
@@ -683,9 +652,6 @@ client.on('guildCreate', guild => {
 });
 
 
-//nnn
- 
-//---------------------------------------------------
 
 client.on("message", message => {
   var prefix = "*";
@@ -734,14 +700,8 @@ if (message.content === "*help") {
  }
  });
 
- //------------------------------------------------------------
+ 
 
- //-------------------------
-
- 
- 
-//كود الافتار
- 
 client.on('message', message => {
     if (message.content.startsWith("*avatar")) {
         if (message.author.bot) return
@@ -765,7 +725,6 @@ client.on('message', message => {
 });
  
  
-//كود الايدي الهو المعلومات الشخصيه
  
 client.on('message', message => {
   var prefix = "*"
@@ -815,7 +774,7 @@ message.channel.send({embed});
  
 });
  
-//كود معلومات السيرفر
+
  
 client.on('message', function(msg) {
     const prefix = '*'
@@ -837,7 +796,7 @@ client.on('message', function(msg) {
     }
   });
  
-//كود البينج الهو سرعة البوت
+
  
 client.on('message', message => {
     if (message.author.bot) return
@@ -856,7 +815,7 @@ client.on('message', message => {
                         }
                     });
  
-//كود معلومات البوت
+
  
 client.on('message', function(message) {
         var prefix = "*";
@@ -875,7 +834,7 @@ message.channel.send({embed:alpha});
 
 
  
-//بعض الاكواد الاداريه اولهم كود مسح الشات
+
  
 client.on('message', msg => {
   if (msg.author.bot) return;
@@ -884,7 +843,7 @@ client.on('message', msg => {
   command = command.slice(prefix.length);
   let args = msg.content.split(" ").slice(1);
 
-    if(command === "clear") {
+    if(command === "*clear") {
         const emoji = client.emojis.find("name", "wastebasket")
     let textxt = args.slice(0).join("");
     if(msg.member.hasPermission("MANAGE_MESSAGES")) {
@@ -901,7 +860,7 @@ client.on('message', msg => {
 }
 });
  
-//ثاني كود معنا هوا البرودكاست البشكل جميل
+
  
 client.on('message', message => {
         var prefix = "*";
@@ -947,7 +906,7 @@ client.on('message', message => {
     });
  
  
-//كود البرودكاست البدون اي شي فقط الكلام
+
  
 client.on('message', message => {
             if(!message.channel.guild) return;
@@ -962,7 +921,7 @@ m.sendMessage(args)
 }
 });
  
-//كود تغير البلاينج و الصوره والاسم
+
  
 const adminprefix = "*";
 const devs = ['427054141492297728', 'none'];
@@ -1000,7 +959,7 @@ if (message.content.startsWith(adminprefix + 'st')) {
 
 });
  
-//كود تقفيل الشات وفتحو
+
  
 client.on('message', message => {
  
@@ -1031,7 +990,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
  
 });
  
-//كود امر عمل تصويت من البوت في روم مخصص
+
  
 client.on('message' , message => {
   var prefix = "*";
@@ -1071,7 +1030,7 @@ suggestchannel.send("@everyone || @here ");
 }
 });
  
-//كود الميوت وفك الميوت
+
  
 client.on('message', message => {  
 if (message.author.boss) return;
@@ -1142,9 +1101,9 @@ var unmuteembeddm = new Discord.RichEmbed()
 });
  
  
-//كود الترحيب ب صوره
+
  
-client.on('guildMemberAdd', Sal => { //By Salto7#4595
+client.on('guildMemberAdd', Sal => { 
     var embed = new Discord.RichEmbed()
     .setAuthor(Sal.user.username, Sal.user.avatarURL)
     .setThumbnail(Sal.user.avatarURL)
@@ -1162,13 +1121,12 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
     channel.send({embed : embed});
     });
  
-//كود اعطاء رتبه الهو الرول
  
 client.on('message', async message => {
     if(message.author.bot) return;
     if(message.channel.type === 'dm') return;
  
-    var prefix = '*'; //<==== تقدر تغير البرفكس
+    var prefix = '*'; 
     var args = message.content.toLowerCase().split(' ');
     var command = args[0];
     var userM = message.guild.member(message.mentions.users.first() || message.guild.members.find(m => m.id === args[1]));
@@ -1178,7 +1136,7 @@ client.on('message', async message => {
         if(!message.guild.member(client.user).hasPermission('MANAGE_ROLES')) return message.channel.send(':no_entry: | I dont have **MANAGE_ROLES** Permission!');
         if(!message.guild.member(client.user).hasPermission('EMBED_LINKS')) return message.channel.send(':no_entry: | I dont have **EMBED_LINKS** Permission!');
  
-        let roleCommand = new Discord.RichEmbed() // حقوق الفا كودز
+        let roleCommand = new Discord.RichEmbed() 
         .setTitle(':white_check_mark: Role Command.')
         .setColor('GREEN')
         .setDescription(`**\n${prefix}role <SOMEONE> <ROLE>**\n➥ \`\`For give or delete from some one the role.\`\`\n\n**${prefix}role humans add <ROLE>**\n➥ \`\`For give the humans role.\`\`\n\n**${prefix}role humans remove <ROLE>**\n➥ \`\`For delete from the humans role.\`\`\n\n**${prefix}role bots add <ROLE>**\n➥ \`\`For give the bots role.\`\`\n\n**${prefix}role bots remove <ROLE>**\n➥ \`\`For delete from the bots role.\`\`\n\n**${prefix}role all add <ROLE>**\n➥ \`\`For give all role.\`\`\n\n**${prefix}role all remove <ROLE>**\n➥ \`\`For remove from all role.\`\``)
@@ -1281,7 +1239,7 @@ client.on('message', async message => {
                               message.guild.member(m).removeRole(getRole.id)
                               await message1.edit(`:white_check_mark: | <@${message.author.id}> Successfully remove the role **${getRole.name}** From all **Humans** .`);
                           });
-                      }); // حقوق الفا كودز
+                      }); 
                   });
                   dontRemove.on('collect', r => {
                       msg.delete();
@@ -1333,7 +1291,7 @@ client.on('message', async message => {
                   dontGive.on('collect', r => {
                       msg.delete();
                       message.channel.send(':negative_squared_cross_mark: | The command has been canceld.').then(msg => msg.delete(5000));
-                  }); // حقوق الفا كودز
+                  }); 
               })
           }else if(args[2] === 'remove') {
               if(getRole.position >= message.guild.member(client.user).highestRole.position) return message.channel.send(`:no_entry: | I can\'t \`\`REMOVE\`\` The role with name **${getRole.name}** From any Bot beacuse the role highest then my role!`);
@@ -1372,7 +1330,7 @@ client.on('message', async message => {
       }else if(args[1] === 'all') {
           let notArgs = new Discord.RichEmbed()
           .setTitle(':white_check_mark: Role Command.')
-          .setColor('GREEN') // حقوق الفا كودز
+          .setColor('GREEN') 
           .setDescription(`**\n${prefix}role all add <ROLE>**\n➥ \`\`For give all the role.\`\`\n\n**${prefix}role all remove <ROLE>**\n➥ \`\`For delete the role from all.\`\``)
           .setTimestamp()
           .setFooter(message.author.tag, message.author.avatarURL)
@@ -1400,7 +1358,7 @@ client.on('message', async message => {
                   let dontGiveAll = (reaction, user) => reaction.emoji.name === '❎' && user.id === message.author.id;
                   let give = msg.createReactionCollector(giveAll, { time: 60000 });
                   let dontGive = msg.createReactionCollector(dontGiveAll, { time: 60000 });
-// حقوق الفا كودز
+
                   give.on('collect', r => {
                       msg.delete();
                       message.channel.send(`:timer: | Now you must wait some time to give **${message.guild.members.filter(m => !message.guild.member(m).roles.has(getRole.id)).size}** The role **${getRole.name}** ...`).then(message1 => {
@@ -1427,7 +1385,7 @@ client.on('message', async message => {
               .setFooter(message.author.tag, message.author.avatarURL)
  
               message.channel.send(allSure).then(msg => {
-                  msg.react('✅').then(() => msg.react('❎')) // حقوق الفا كودز
+                  msg.react('✅').then(() => msg.react('❎')) 
  
                   let removeRole = (reaction, user) => reaction.emoji.name === '✅'  && user.id === message.author.id;
                   let dontRemoveRole = (reaction, user) => reaction.emoji.name === '❎' && user.id === message.author.id;
@@ -1441,19 +1399,19 @@ client.on('message', async message => {
                               message.guild.member(m).removeRole(getRole.id);
                               await message1.edit(`:white_check_mark: | <@${message.author.id}> Successfully remove the role **${getRole.name}** From **All** .`);
                           });
-                      }); // حقوق الفا كودز
+                      }); 
                   });
                   dontRemove.on('collect', r => {
                       msg.delete();
                       message.channel.send(':negative_squared_cross_mark: | The command has been canceld.').then(msg => msg.delete(5000));
                   });
               })
-          } // حقوق الفا كودز
+          } 
       }
-  } // حقوق الفا كودز
+  } 
 });
  
-//كود الوق ما عليك انك تسوي روم اسمو (log)
+
  
 client.on('messageDelete', message => {
  
@@ -2001,16 +1959,16 @@ client.on('voiceStateUpdate', (voiceOld, voiceNew) => {
     }
 });
  
-//كود لما تمنشن البوت يرد عليكي
+
  
 client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
     {
-    message.reply("هلا امرني اذا تبي مساعده اكتب *help");
+    message.reply("*help هلا امرني اذا تبي مساعده اكتب ");
     }
 });
-//لعبة اكس او
+
  
 client.on('message' , message => {
   var prefix = "*";
@@ -2078,9 +2036,9 @@ client.on('message' , message => {
  });
  
  
-//لوق دخول وخروج البوت من السيرفرات
+
  
-//Added  & Kicked 
+ 
 client.on('guildDelete', guild => {
   let joinedbot = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -2089,7 +2047,7 @@ client.on('guildDelete', guild => {
   Server Owner: [ ${guild.owner} ]
   Server ID: [ ${guild.id} ]
   Server Count: [ ${guild.memberCount} ]`)
-  client.channels.get("499657112041947136").sendEmbed(joinedbot);
+  client.channels.get("511683572348878869").sendEmbed(joinedbot);
 });
 
 
@@ -2105,7 +2063,6 @@ client.on('guildDelete', guild => {
 });
  
  
-//كود الكيك والبان
  
 client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
